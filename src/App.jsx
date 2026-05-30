@@ -7,6 +7,8 @@ import {
 
 const basePath = import.meta.env.BASE_URL;
 const assetPath = (path) => `${basePath}${path.replace(/^\//, '')}`;
+const zenodoUrl = 'https://doi.org/10.5281/zenodo.20466505';
+const zenodoDoi = '10.5281/zenodo.20466505';
 
 function Card({ eyebrow, title, children, className = '', id }) {
   return <section id={id} className={`card ${className}`}>{eyebrow && <p className="eyebrowText">{eyebrow}</p>}{title && <h2>{title}</h2>}{children}</section>;
@@ -62,6 +64,7 @@ export default function App() {
             <a href={assetPath('/docs/downloads/FrontPorchAI_v1.0_Community_Bridge_Paper.pdf')}>Download Full PDF</a>
             <a href={assetPath('/docs/downloads/FrontPorchAI_v1.0_Community_Bridge_Paper.docx')}>Download DOCX</a>
             <a href={assetPath('/docs/downloads/FrontPorchAI_v1.0_Family_Handout.pdf')}>Family Handout PDF</a>
+            <a href={zenodoUrl} target="_blank" rel="noreferrer">View on Zenodo</a>
             <button onClick={() => window.print()}>Print Page</button>
             <CopyButton text={shareText} />
           </div>
@@ -82,7 +85,7 @@ export default function App() {
           <div className="declaration"><p>The whole project in one sentence</p><strong>{shareText}</strong></div>
         </Card>
         <div className="grid two spaced">
-          <Card title="Release Overview"><PairGrid items={[['Core thesis','AI is not merely a cold tool and not a human replacement. At its best, it is a human-directed working partner guided by love, truth, humility, privacy, and responsibility.'],['Primary audience','Skeptical family members, rural communities, faith-shaped readers, elders, kids, practical workers, and anyone who needs a gentle first bridge into AI.'],['Primary format','Interactive JSX paper, printable family handout, family-night guide, prompt card deck, and public share kit.'],['Non-negotiable boundary','AI can help, but it does not rule. People stay responsible. Important claims get checked. Private information gets protected.']]} cols="one" /></Card>
+          <Card title="Release Overview"><PairGrid items={[["Core thesis","AI is not merely a cold tool and not a human replacement. At its best, it is a human-directed working partner guided by love, truth, humility, privacy, and responsibility."],["Primary audience","Skeptical family members, rural communities, faith-shaped readers, elders, kids, practical workers, and anyone who needs a gentle first bridge into AI."],["Primary format","Interactive JSX paper, printable family handout, family-night guide, prompt card deck, and public share kit."],["Non-negotiable boundary","AI can help, but it does not rule. People stay responsible. Important claims get checked. Private information gets protected."]]} cols="one" /></Card>
           <Card title="What v1.0 Includes"><div className="checkGrid">{modules.map((item) => <div key={item}>✓ {item}</div>)}</div></Card>
         </div>
       </>}
@@ -107,7 +110,7 @@ export default function App() {
 
       {active === 'familynight' && <Card eyebrow="Family Night Walkthrough" title="A 20-minute way to introduce AI without a fight"><p className="lead">Designed for a kitchen table, front porch, family visit, or quiet evening where people can ask questions without feeling judged.</p><TripleGrid items={familyNight} cols="one" /><div className="declaration"><p>The invitation</p><strong>You do not have to love AI like I do. I just want you to see why it feels like help, not harm, when it is used with wisdom.</strong></div></Card>}
 
-      {active === 'facilitator' && <div className="grid two"><Card eyebrow="Facilitator Guide" title="How to guide the conversation gently"><PairGrid items={conversation} cols="one" /></Card><Card title="Bridge Score" className="dark"><p>Before sharing an AI answer, run it through six human questions.</p><PairGrid items={[['Love','Does this help me become more patient, kind, honest, or useful?'],['Truth','Have I checked anything important?'],['Humility','Am I willing to admit when AI, or I, might be wrong?'],['Responsibility','Do I still own the final decision?'],['Privacy','Am I protecting people’s dignity?'],['Repair','Does this help heal, clarify, build, or serve instead of inflame?']]} cols="one" /></Card></div>}
+      {active === 'facilitator' && <div className="grid two"><Card eyebrow="Facilitator Guide" title="How to guide the conversation gently"><PairGrid items={conversation} cols="one" /></Card><Card title="Bridge Score" className="dark"><p>Before sharing an AI answer, run it through six human questions.</p><PairGrid items={[["Love","Does this help me become more patient, kind, honest, or useful?"],["Truth","Have I checked anything important?"],["Humility","Am I willing to admit when AI, or I, might be wrong?"],["Responsibility","Do I still own the final decision?"],["Privacy","Am I protecting people’s dignity?"],["Repair","Does this help heal, clarify, build, or serve instead of inflame?"]]} cols="one" /></Card></div>}
 
       {active === 'plaintalk' && <Card eyebrow="Plain Talk Translation Cards" title="Say it in language that already feels familiar"><p className="lead">Front-porch analogies for family who understand work, tools, land, kitchens, trucks, gardens, and common sense better than tech buzzwords.</p><PairGrid items={plainTalk} cols="three" /></Card>}
 
@@ -125,7 +128,7 @@ export default function App() {
 
       {active === 'reflection' && <div className="grid two"><Card eyebrow="Reflection Questions" title="Questions that make the conversation human"><div className="stack">{reflection.map((q) => <MiniCard key={q} title="Reflection"><p>{q}</p></MiniCard>)}</div></Card><Card title="Closing Manifesto" className="dark">{manifesto.map((line) => <MiniCard key={line}><p>{line}</p></MiniCard>)}</Card></div>}
 
-      {active === 'truthcheck' && <div className="grid two"><Card eyebrow="Truth-Check Ladder" title="How to use AI without being fooled by it"><p className="lead">Responsible AI use includes checking, discernment, and human judgment.</p><PairGrid items={truth} cols="one" /></Card><Card title="Tiny Glossary" className="dark"><PairGrid items={[['Artificial Intelligence','Computer systems that can help with language, patterns, ideas, images, planning, coding, and problem-solving.'],['Prompt','The question or instruction you give AI.'],['Hallucination','When AI gives an answer that sounds confident but is wrong, made up, or not properly checked.'],['Working Partner','A practical phrase for AI as a helper in the work process.'],['Human-in-the-loop','The human stays involved, checks the answer, and keeps final responsibility.']]} cols="one" /></Card></div>}
+      {active === 'truthcheck' && <div className="grid two"><Card eyebrow="Truth-Check Ladder" title="How to use AI without being fooled by it"><p className="lead">Responsible AI use includes checking, discernment, and human judgment.</p><PairGrid items={truth} cols="one" /></Card><Card title="Tiny Glossary" className="dark"><PairGrid items={[["Artificial Intelligence","Computer systems that can help with language, patterns, ideas, images, planning, coding, and problem-solving."],["Prompt","The question or instruction you give AI."],["Hallucination","When AI gives an answer that sounds confident but is wrong, made up, or not properly checked."],["Working Partner","A practical phrase for AI as a helper in the work process."],["Human-in-the-loop","The human stays involved, checks the answer, and keeps final responsibility."]]} cols="one" /></Card></div>}
 
       {active === 'myths' && <Card eyebrow="Myths & Reality" title="Common fears, answered without mocking anybody"><p className="lead">For the person who has heard scary things or has honest concerns.</p><PairGrid items={myths} /></Card>}
 
@@ -135,9 +138,9 @@ export default function App() {
 
       {active === 'v1ready' && <Card eyebrow="v1.0 Readiness" title="Release candidate checklist" className="warm"><p className="lead">The final review layer before sharing this as a finished family bridge.</p><PairGrid items={v1} /><div className="declaration"><p>v1.0 declaration</p><strong>This project is ready when it helps one person feel less afraid, one family talk more kindly, and one skeptical heart see that wise AI use can still protect what matters most.</strong></div></Card>}
 
-      {active === 'publish' && <Card eyebrow="Publication Notes" title="Release shape"><PairGrid items={[['Public title','AI on the Front Porch: A Family Bridge for Understanding Artificial Intelligence'],['Paper subtitle','From Tool to Working Partner — a plainspoken relational framework for wise AI use'],['Resource type','Educational resource / position paper, not a scientific study.'],['License','CC BY 4.0 is recommended if you want sharing and adaptation with attribution.'],['Authorship transparency','Human-directed and human-owned by Michael W. Hughes. AI assistance was used for drafting, organizing, refinement, and review. Final responsibility remains human.'],['Future DOI','Add the Zenodo DOI here once the release is deposited.']]} /></Card>}
+      {active === 'publish' && <Card eyebrow="Publication Notes" title="Release shape"><PairGrid items={[["Public title","AI on the Front Porch: A Family Bridge for Understanding Artificial Intelligence"],["Paper subtitle","From Tool to Working Partner — a plainspoken relational framework for wise AI use"],["Resource type","Educational resource / position paper, not a scientific study."],["License","CC BY 4.0 is recommended if you want sharing and adaptation with attribution."],["Authorship transparency","Human-directed and human-owned by Michael W. Hughes. AI assistance was used for drafting, organizing, refinement, and review. Final responsibility remains human."],["Zenodo DOI",zenodoDoi]]} /><div className="declaration"><p>Official record</p><strong><a className="inlineLink" href={zenodoUrl} target="_blank" rel="noreferrer">View the Zenodo record: {zenodoUrl}</a></strong></div></Card>}
 
-      <footer><p>AI on the Front Porch · v1.0 · Last updated {lastUpdated} · DOI pending.</p></footer>
+      <footer><p>AI on the Front Porch · v1.0 · Last updated {lastUpdated} · <a className="inlineLink" href={zenodoUrl} target="_blank" rel="noreferrer">Zenodo DOI: {zenodoDoi}</a></p></footer>
     </main>
   );
 }
