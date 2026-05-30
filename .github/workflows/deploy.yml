@@ -32,6 +32,18 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Copy downloadable documents into Pages build
+        run: |
+          mkdir -p dist/docs/downloads
+          if [ -d docs/downloads ]; then
+            cp -R docs/downloads/* dist/docs/downloads/ || true
+          fi
+
+      - name: Copy markdown docs into Pages build
+        run: |
+          mkdir -p dist/docs
+          cp docs/*.md dist/docs/ || true
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
