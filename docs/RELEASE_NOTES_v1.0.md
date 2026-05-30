@@ -8,6 +8,10 @@
 
 v1.0
 
+## DOI
+
+https://doi.org/10.5281/zenodo.20466505
+
 ## Release summary
 
 FrontPorchAI v1.0 is a plainspoken family education resource for helping skeptical, rural, faith-shaped, practical, or family-centered readers understand artificial intelligence without fear, hype, or blind trust.
@@ -52,17 +56,13 @@ Educational resource / position paper. This is not a scientific study, medical g
 
 Human-directed and human-owned by Michael W. Hughes. AI assistance was used for drafting, organizing, refinement, and review. Final responsibility remains human.
 
-## Suggested release assets
+## Release assets
 
 - `FrontPorchAI_v1.0_Community_Bridge_Paper.pdf`
 - `FrontPorchAI_v1.0_Community_Bridge_Paper.docx`
 - `FrontPorchAI_v1.0_Family_Handout.pdf`
 - `FrontPorchAI_v1.0_Family_Handout.docx`
 
-## Suggested GitHub release description
+## Citation
 
-FrontPorchAI v1.0 is the first public release of **AI on the Front Porch**, a family bridge for understanding artificial intelligence without fear, hype, or blind trust.
-
-This release includes the interactive site, a full community bridge paper, a one-page family handout, prompt cards, privacy and truth-checking guidance, and family conversation tools.
-
-It is designed for families, rural communities, faith-shaped readers, elders, kids, practical workers, and anyone who wants a gentler first conversation about AI.
+Hughes, Michael W. (2026). *AI on the Front Porch: A Family Bridge for Understanding Artificial Intelligence* (v1.0). Zenodo. https://doi.org/10.5281/zenodo.20466505
