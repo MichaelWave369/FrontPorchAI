@@ -1,4 +1,8 @@
-# Zenodo Metadata Draft — FrontPorchAI v1.0
+# Zenodo Metadata — FrontPorchAI v1.0
+
+## DOI
+
+https://doi.org/10.5281/zenodo.20466505
 
 ## Upload type
 
@@ -39,7 +43,7 @@ This is an educational resource and position paper, not a scientific study. It i
 
 ## License
 
-Creative Commons Attribution 4.0 International (CC BY 4.0) recommended.
+Creative Commons Attribution 4.0 International (CC BY 4.0)
 
 ## Version
 
@@ -51,17 +55,23 @@ GitHub repository: https://github.com/MichaelWave369/FrontPorchAI
 
 Live interactive site: https://michaelwave369.github.io/FrontPorchAI/
 
-## Suggested files to upload
+Zenodo DOI: https://doi.org/10.5281/zenodo.20466505
+
+## Uploaded files
 
 - `FrontPorchAI_v1.0_Community_Bridge_Paper.pdf`
 - `FrontPorchAI_v1.0_Community_Bridge_Paper.docx`
 - `FrontPorchAI_v1.0_Family_Handout.pdf`
 - `FrontPorchAI_v1.0_Family_Handout.docx`
-- Optional source archive from GitHub release
+- GitHub release source archive
 
 ## Authorship transparency note
 
 This resource was human-directed and human-owned by Michael W. Hughes. AI assistance was used for drafting, organizing, refinement, and review. Final responsibility remains human.
+
+## Citation
+
+Hughes, Michael W. (2026). *AI on the Front Porch: A Family Bridge for Understanding Artificial Intelligence* (v1.0). Zenodo. https://doi.org/10.5281/zenodo.20466505
 
 ## Core boundary
 
