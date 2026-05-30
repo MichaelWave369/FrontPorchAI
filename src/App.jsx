@@ -14,6 +14,9 @@ const sections = [
   'Publish Notes'
 ];
 
+const basePath = import.meta.env.BASE_URL;
+const assetPath = (path) => `${basePath}${path.replace(/^\//, '')}`;
+
 const prompts = [
   ['Kindness Rewriter', 'Rewrite this message so it is honest, calm, kind, and not passive-aggressive. Keep my meaning, but remove anything that would start a fight: [paste message].'],
   ['Explain It Like Family', 'Explain [topic] in plain language for a practical family member who does not like tech jargon. Use a farm, garage, kitchen, or front-porch analogy.'],
@@ -80,8 +83,8 @@ export default function App() {
         <h1>AI on the Front Porch</h1>
         <p className="subtitle">A family bridge for understanding artificial intelligence without fear, hype, or blind trust.</p>
         <div className="heroActions">
-          <a href="/docs/downloads/FrontPorchAI_v1.0_Community_Bridge_Paper.pdf">Download PDF</a>
-          <a href="/docs/downloads/FrontPorchAI_v1.0_Community_Bridge_Paper.docx">Download DOCX</a>
+          <a href={assetPath('/docs/downloads/FrontPorchAI_v1.0_Community_Bridge_Paper.pdf')}>Download PDF</a>
+          <a href={assetPath('/docs/downloads/FrontPorchAI_v1.0_Community_Bridge_Paper.docx')}>Download DOCX</a>
           <button onClick={() => window.print()}>Print Page</button>
         </div>
       </header>
