@@ -1,0 +1,18 @@
+{
+  "name": "frontporchai",
+  "version": "1.0.0",
+  "private": false,
+  "description": "AI on the Front Porch - a family bridge for understanding AI without fear, hype, or blind trust.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {}
+}
